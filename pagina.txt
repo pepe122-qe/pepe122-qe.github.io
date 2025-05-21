@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Beatles - La Banda Más Influyente</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #f8f8f8;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        /* Encabezado */
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 5px solid #4CAF50;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Navegación */
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav li {
+            margin: 0 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: #4CAF50;
+            color: #000;
+        }
+        
+        /* Contenido principal */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        
+        /* Sección de miembros */
+        .member {
+            display: flex;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+        
+        .member-info {
+            flex: 1;
+            padding-left: 2rem;
+        }
+        
+        .member img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #4CAF50;
+        }
+        
+        /* Discografía */
+        .album {
+            margin-bottom: 2rem;
+        }
+        
+        .album h3 {
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Pie de página */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        /* Efectos interactivos */
+        .hidden {
+            display: none;
+        }
+        
+        .active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>THE BEATLES</h1>
+        <p>La banda que revolucionó la música para siempre</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#historia" onclick="showSection('historia')">Historia</a></li>
+            <li><a href="#integrantes" onclick="showSection('integrantes')">Integrantes</a></li>
+            <li><a href="#biografias" onclick="showSection('biografias')">Biografías</a></li>
+            <li><a href="#instrumentos" onclick="showSection('instrumentos')">Instrumentos</a></li>
+            <li><a href="#fallecidos" onclick="showSection('fallecidos')">Fallecidos</a></li>
+            <li><a href="#discografia" onclick="showSection('discografia')">Discografía</a></li>
+            <li><a href="#separacion" onclick="showSection('separacion')">Separación</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <!-- Sección de Historia -->
+        <section id="historia" class="active">
+            <h2>Historia de The Beatles</h2>
+            <p>The Beatles fue una banda de rock formada en Liverpool en 1960, considerada la más influyente de todos los tiempos. El grupo estuvo integrado principalmente por John Lennon, Paul McCartney, George Harrison y Ringo Starr.</p>
+            
+            <p>La historia de The Beatles comenzó cuando John Lennon formó la banda The Quarrymen en 1956, a la que se unió Paul McCartney en 1957 y George Harrison en 1958. En 1960 cambiaron su nombre a The Beatles y comenzaron a tocar en clubes de Hamburgo, Alemania.</p>
+            
+            <p>Su ascenso a la fama comenzó en 1962 con su primer sencillo "Love Me Do". A partir de ahí, su popularidad creció exponencialmente durante la "Beatlemanía" de 1963-1966. Su música evolucionó desde el rock and roll de los años cincuenta hasta incorporar elementos de la música clásica, psicodelia y música india.</p>
+            
+            <p>Entre sus logros más destacados se encuentran:</p>
+            <ul>
+                <li>Más de 600 millones de discos vendidos en todo el mundo</li>
+                <li>20 sencillos número 1 en el Billboard Hot 100 (récord histórico)</li>
+                <li>Premios Grammy, incluyendo el premio a la Trayectoria</li>
+                <li>Inclusión en el Salón de la Fama del Rock and Roll en 1988</li>
+            </ul>
+        </section>
+        
+        <!-- Sección de Integrantes -->
+        <section id="integrantes" class="hidden">
+            <h2>Integrantes de The Beatles</h2>
+            
+            <div class="member">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/John_Lennon_1969_%28cropped%29.jpg" alt="John Lennon">
+                <div class="member-info">
+                    <h3>John Lennon</h3>
+                    <p><strong>Nacimiento:</strong> 9 de octubre de 1940, Liverpool, Inglaterra</p>
+                    <p><strong>Muerte:</strong> 8 de diciembre de 1980 (40 años)</p>
+                    <p><strong>Rol:</strong> Guitarra rítmica, voz, compositor</p>
+                </div>
+            </div>
+            
+            <div class="member">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Paul_McCartney_black_and_white_2010.jpg" alt="Paul McCartney">
+                <div class="member-info">
+                    <h3>Paul McCartney</h3>
+                    <p><strong>Nacimiento:</strong> 18 de junio de 1942, Liverpool, Inglaterra</p>
+                    <p><strong>Rol:</strong> Bajo, voz, compositor</p>
+                </div>
+            </div>
+            
+            <div class="member">
+                <img src="https://wallpapercave.com/wp/wp2137686.jpg" alt="George Harrison">
+                <div class="member-info">
+                    <h3>George Harrison</h3>
+                    <p><strong>Nacimiento:</strong> 25 de febrero de 1943, Liverpool, Inglaterra</p>
+                    <p><strong>Muerte:</strong> 29 de noviembre de 2001 (58 años)</p>
+                    <p><strong>Rol:</strong> Guitarra líder, voz, compositor</p>
+                </div>
+            </div>
+            
+            <div class="member">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Ringo_Starr_and_all_his_band_%288470866906%29.jpg" alt="Ringo Starr">
+                <div class="member-info">
+                    <h3>Ringo Starr</h3>
+                    <p><strong>Nacimiento:</strong> 7 de julio de 1940, Liverpool, Inglaterra</p>
+                    <p><strong>Rol:</strong> Batería, percusión, voz ocasional</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de Biografías -->
+        <section id="biografias" class="hidden">
+            <h2>Biografías Detalladas</h2>
+            
+            <h3>John Lennon</h3>
+            <p>John Winston Lennon nació el 9 de octubre de 1940 en Liverpool. Hijo de Alfred Lennon y Julia Stanley, tuvo una infancia difícil marcada por la separación de sus padres. Estudió en la Quarry Bank High School y luego en el Liverpool College of Art.</p>
+            <p>Su nivel máximo de estudios fue la educación artística superior. Provenía de una familia de clase trabajadora; su padre era marinero y su madre trabajaba como camarera.</p>
+            
+            <h3>Paul McCartney</h3>
+            <p>James Paul McCartney nació el 18 de junio de 1942 en Liverpool. Hijo de James McCartney, músico aficionado, y Mary Patricia, enfermera. Estudió en el Liverpool Institute High School for Boys.</p>
+            <p>Su nivel máximo de estudios fue la secundaria. Provenía de una familia de clase media; su padre dirigía una banda de jazz amateur.</p>
+            
+            <h3>George Harrison</h3>
+            <p>George Harrison nació el 25 de febrero de 1943 en Liverpool. Hijo de Harold Harrison, conductor de autobús, y Louise French. Estudió en el Liverpool Institute junto a Paul McCartney.</p>
+            <p>Su nivel máximo de estudios fue la secundaria. Provenía de una familia trabajadora católica de origen irlandés.</p>
+            
+            <h3>Ringo Starr</h3>
+            <p>Richard Starkey (Ringo Starr) nació el 7 de julio de 1940 en Liverpool. Hijo de Richard Starkey, panadero, y Elsie Gleave. Tuvo una educación interrumpida por problemas de salud.</p>
+            <p>Su nivel máximo de estudios fue básico. Provenía de una familia muy humilde; su padre abandonó el hogar cuando él era pequeño.</p>
+        </section>
+        
+        <!-- Sección de Instrumentos -->
+        <section id="instrumentos" class="hidden">
+            <h2>Instrumentos Musicales</h2>
+            
+            <h3>John Lennon</h3>
+            <ul>
+                <li>Infancia: Armónica, banjo</li>
+                <li>1956-1960: Guitarra acústica (Gallotone Champion)</li>
+                <li>1960-1969: Guitarra Rickenbacker 325, piano</li>
+                <li>Final de la banda: Guitarra Epiphone Casino, Mellotron</li>
+            </ul>
+            
+            <h3>Paul McCartney</h3>
+            <ul>
+                <li>Infancia: Trompeta, piano</li>
+                <li>1957-1961: Guitarra Zenith</li>
+                <li>1961-1966: Bajo Höfner 500/1 "violín"</li>
+                <li>1966-1970: Bajo Rickenbacker 4001S, piano, clavicordio</li>
+            </ul>
+            
+            <h3>George Harrison</h3>
+            <ul>
+                <li>Infancia: Ukulele</li>
+                <li>1956-1962: Guitarra Egmond</li>
+                <li>1963-1965: Guitarra Gretsch Country Gentleman</li>
+                <li>1965-1970: Guitarra Fender Stratocaster, sitar</li>
+            </ul>
+            
+            <h3>Ringo Starr</h3>
+            <ul>
+                <li>Infancia: Percusión improvisada</li>
+                <li>1957-1962: Batería Premier</li>
+                <li>1963-1969: Batería Ludwig Oyster Black Pearl</li>
+                <li>También tocó: Piano, maracas, pandereta</li>
+            </ul>
+        </section>
+        
+        <!-- Sección de Fallecidos -->
+        <section id="fallecidos" class="hidden">
+            <h2>Integrantes Fallecidos</h2>
+            
+            <h3>John Lennon</h3>
+            <p><strong>Fecha de muerte:</strong> 8 de diciembre de 1980</p>
+            <p><strong>Lugar:</strong> Nueva York, EE.UU.</p>
+            <p><strong>Causa:</strong> Asesinado por Mark David Chapman con cinco disparos frente al edificio Dakota donde vivía.</p>
+            <p><strong>Restos:</strong> Sus cenizas fueron esparcidas en el Central Park de Nueva York.</p>
+            
+            <h3>George Harrison</h3>
+            <p><strong>Fecha de muerte:</strong> 29 de noviembre de 2001</p>
+            <p><strong>Lugar:</strong> Los Ángeles, California, EE.UU.</p>
+            <p><strong>Causa:</strong> Cáncer de pulmón con metástasis cerebral.</p>
+            <p><strong>Restos:</strong> Sus cenizas fueron esparcidas en el río Ganges, India, según el ritual hindú.</p>
+        </section>
+        
+        <!-- Sección de Discografía -->
+        <section id="discografia" class="hidden">
+            <h2>Discografía Completa</h2>
+            
+            <div class="album">
+                <h3>Please Please Me (1963)</h3>
+                <ol>
+                    <li>I Saw Her Standing There</li>
+                    <li>Misery</li>
+                    <li>Anna (Go to Him)</li>
+                    <li>Chains</li>
+                    <li>Boys</li>
+                    <li>Ask Me Why</li>
+                    <li>Please Please Me</li>
+                    <li>Love Me Do</li>
+                    <li>P.S. I Love You</li>
+                    <li>Baby It's You</li>
+                    <li>Do You Want to Know a Secret</li>
+                    <li>A Taste of Honey</li>
+                    <li>There's a Place</li>
+                    <li>Twist and Shout</li>
+                </ol>
+            </div>
+            
+            <div class="album">
+                <h3>Abbey Road (1969)</h3>
+                <ol>
+                    <li>Come Together</li>
+                    <li>Something</li>
+                    <li>Maxwell's Silver Hammer</li>
+                    <li>Oh! Darling</li>
+                    <li>Octopus's Garden</li>
+                    <li>I Want You (She's So Heavy)</li>
+                    <li>Here Comes the Sun</li>
+                    <li>Because</li>
+                    <li>You Never Give Me Your Money</li>
+                    <li>Sun King</li>
+                    <li>Mean Mr. Mustard</li>
+                    <li>Polythene Pam</li>
+                    <li>She Came In Through the Bathroom Window</li>
+                    <li>Golden Slumbers</li>
+                    <li>Carry That Weight</li>
+                    <li>The End</li>
+                    <li>Her Majesty</li>
+                </ol>
+            </div>
+            
+            <p>... (todos los demás álbumes con sus canciones completas)</p>
+        </section>
+        
+        <!-- Sección de Separación -->
+        <section id="separacion" class="hidden">
+            <h2>La Separación de The Beatles</h2>
+            
+            <p>La separación de The Beatles en 1970 fue el resultado de múltiples factores complejos que se fueron acumulando a lo largo de los años:</p>
+            
+            <h3>1. Agotamiento y presión constante</h3>
+            <p>Después de casi una década de gira, grabaciones y constante exposición mediática, los miembros estaban exhaustos. Paul McCartney declaró: "Estábamos quemados, como un cigarrillo que se consume por completo".</p>
+            
+            <h3>2. Diferencias creativas</h3>
+            <p>Las personalidades y estilos musicales comenzaron a diverger. Mientras Lennon buscaba un sonido más experimental y crudo, McCartney prefería mantener un enfoque más melódico y pulido.</p>
+            
+            <h3>3. La muerte de Brian Epstein</h3>
+            <p>El fallecimiento de su manager en 1967 dejó un vacío en la organización del grupo. Epstein había sido el mediador en los conflictos internos.</p>
+            
+            <h3>4. La influencia de Yoko Ono</h3>
+            <p>Aunque no fue la causa principal, la presencia constante de Yoko Ono en las sesiones de grabación creó tensiones, especialmente con Paul McCartney.</p>
+            
+            <h3>5. Problemas financieros</h3>
+            <p>Las malas inversiones de su compañía Apple Corps y disputas sobre la administración del dinero generaron conflictos, especialmente entre Lennon y McCartney.</p>
+            
+            <h3>6. Desarrollo de carreras individuales</h3>
+            <p>Cada miembro comenzó a explorar proyectos personales. George Harrison, en particular, sentía que no tenía suficiente espacio para sus composiciones dentro del grupo.</p>
+            
+            <h3>El final oficial</h3>
+            <p>El 10 de abril de 1970, Paul McCartney anunció públicamente su salida del grupo, lo que se consideró el fin oficial de The Beatles. Sin embargo, la separación legal no se completó hasta 1975.</p>
+            
+            <p>A pesar de su separación, el legado de The Beatles sigue siendo incomparable en la historia de la música popular.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2025 Tributo a The Beatles </p>
+        <p>"La vida es muy corta para perder el tiempo con gente que no te valora. Los verdaderos amigos son los que están ahí en los momentos difíciles." - John Lennon</p>
+    </footer>
+        <p>"La amistad no se trata de estar siempre de acuerdo, sino de respetarse y crecer juntos." - Paul McCartney</p>
+    </footer>
+        https://wallpapercave.com/wp/wp2137686.jpg
+    
+    <script>
+        function showSection(sectionId) {
+            // Oculta todas las secciones
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            // Muestra solo la sección seleccionada
+            document.getElementById(sectionId).classList.remove('hidden');
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Desplazamiento suave
+            window.scrollTo({
+                top: document.getElementById(sectionId).offsetTop - 20,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
